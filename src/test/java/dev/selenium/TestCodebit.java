@@ -30,16 +30,16 @@ public class TestCodebit{
     @Test
     public void ProbaCodebit() throws Exception{
       WebElement name = driver.findElement(By.id("name_contact"));
-      name.sendKeys("Proba nome");
+      name.sendKeys("Proba nome");//Funciona ok
       WebElement email = driver.findElement(By.id("email_contact"));
-      email.sendKeys("proba@proba.com");
+      email.sendKeys("proba@proba.com");//Funciona ok
       WebElement tel = driver.findElement(By.id("phone_contact"));
-      tel.sendKeys("999999999");
+      tel.sendKeys("999999999");//Funciona ok
       WebElement mensaje = driver.findElement(By.id("message_contact"));
-      mensaje.sendKeys("Esto é unha proba de seguridade.");
+      mensaje.sendKeys("Esto é unha proba de seguridade.");//Funciona ok
       WebElement checkbox = driver.findElement(By.xpath(".//label"));
       Thread.sleep(5000);
-      checkbox.click();//Non permite facer click no checbox, solo no texto
+      checkbox.click();//FALLO, non permite facer click no checbox, solo no texto
       WebElement submit = driver.findElement(By.id("btnEnviar"));
       submit.click();
       Thread.sleep(3000);
